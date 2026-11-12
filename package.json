@@ -1,0 +1,50 @@
+{
+  "name": "dynamic-telegram-bot-api-mcp",
+  "version": "10.3.4",
+  "mcpName": "io.github.patricktobias86/dynamic-telegram-bot-api-mcp",
+  "description": "A dynamic, self-refreshing MCP gateway for the complete Telegram Bot API",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PrimeUpYourLife/dynamic-telegram-bot-api-mcp.git"
+  },
+  "type": "module",
+  "bin": {
+    "telegram-bot-api-mcp": "dist/index.js"
+  },
+  "files": [
+    "dist",
+    "data/telegram-bot-api.json",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "check": "tsc -p tsconfig.json --noEmit",
+    "dev": "tsx src/index.ts",
+    "start": "node dist/index.js",
+    "refresh-schema": "tsx scripts/refresh-schema.ts",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "keywords": [
+    "mcp",
+    "telegram",
+    "telegram-bot-api",
+    "model-context-protocol"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=20.18.1"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.30.0",
+    "cheerio": "1.2.0",
+    "zod": "4.6.1"
+  },
+  "devDependencies": {
+    "@types/node": "26.2.0",
+    "tsx": "^4.23.13",
+    "typescript": "^7.0.2",
+    "vitest": "^4.1.1"
+  }
+}
